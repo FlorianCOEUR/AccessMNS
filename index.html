@@ -15,7 +15,7 @@
                 <img src="img/aMNS_logo.png" alt="logo Access MNS">
                 <div>
                     <span>Premier jour? </span>
-                    <a href="">Démarrez ici!</a>
+                    <a href="#" id="starting">Démarrez ici!</a>
                 </div>
             </div>
         </header>
@@ -30,7 +30,7 @@
                         <label for="email">Entre votre Email*</label>
                         <input type="email" name="mail" id="email" placeholder="nom.prenom@amns.fr">
                         <label for="motdepasse"> Mot de Passe*</label>
-                        <input type="password" name="mdp" id="motdepasse">
+                        <input type="password" name="mdp" id="motdepasse" required>
                         <input class="boutton" type="submit" name="connexion" id="connect" value="Connexion">
                     </form>
                 </div>
@@ -40,17 +40,26 @@
                 <div>
                     <div class="welcome_header">
                         <h2>Bienvenue Chez MNS</h2>
-                        <a href=""><img src="img/close.png" alt="boutton de fermeture"></a>
+                        <a href="#" id="end_starting"><img src="img/close.png" alt="boutton de fermeture"></a>
                     </div>
                     <div class="welcome_content">
                         <form action="">
-                            <label for="email"><img src="img/arobase.png" alt=" logo arobase">Entrez votre email :</label>
-                            <input type="email" name="mail" id="email" placeholder="nom.prenom@amns.fr">
-                            <input class="boutton" type="submit" name="continue" id="continue" value="Continuer">
+                            <label for="new_email"><img src="img/arobase.png" alt=" logo arobase">Entrez votre email :</label>
+                            <input type="email" name="mail" id="new_email" placeholder="nom.prenom@amns.fr" required>
+                            <input class="boutton" type="button" onclick="testValue();" name="continue" id="continue" value="Continuer">
                         </form>
+                        <p class="alert">Veuillez entrer une adresse email valide!</p>
+                    </div>
+                    <div class="welcome_content_mdp">
+                        <label for="motdepasse"> Mot de Passe*</label>
+                        <input type="password" name="mdp" id="motdepasse" required>
+                        <label for="motdepasse_check"> Mot de Passe*</label>
+                        <input type="password" name="mdp_check" id="motdepasse_check" required>
+                        <input class="boutton" type="submit" name="nouveau_mdp" id="new_mdp" value="Démarrer">
                     </div>
                 </div>
             </div>
         </main>
+        <script src="js/script.js"></script>
     </body>
 </html>

@@ -47,7 +47,7 @@ header{
     padding: 10px 0;
     width: 100%;
 }
-#connect, #continue{
+#connect, #continue, #new_mdp{
     width: auto;
     justify-self: center;
     margin-top: 10px;
@@ -55,9 +55,8 @@ header{
 }
 
 
-
 .welcome{
-    display: flex;
+    display: none;
     position:absolute;
     top:0;
     background-color: rgba(20, 26, 54, 0.28);
@@ -78,20 +77,25 @@ header{
 }
 .welcome_header{
     justify-content: space-between;
+    margin-bottom: 20px;
 }
-.welcome_content{
+.welcome_content, .welcome_content_mdp{
     border: 1px solid rgba(0, 0, 0, 0.38);
-    padding: 5px;
+    justify-content: center;
 }
-
-.welcome_content input, .welcome_content label{
+.welcome input, .welcome label{
     display: block;
     width: 100%;
-    padding: 10px 0;;
+    padding: 10px 0;
+    margin-bottom: 20px;
 }
-.welcome_content label img{
+.welcome label img{
     transform:translateY(6px) ;
     padding-right: 5px;
+}
+.alert{
+    display: none;
+    color:red;
 }
 
 
@@ -119,10 +123,10 @@ header{
     .display_connexion input, .display_connexion label{
         width: 580px;
     }
-    .welcome_content{
+    .welcome>div{
         width: 500px;
     }
-    .welcome_content input,.welcome_content label{
+    .welcome input,.welcome label{
         width: 480px;
     }
 }
