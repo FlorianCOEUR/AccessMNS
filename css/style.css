@@ -2,6 +2,7 @@
     --pimary_color:#FE6716;
     --blue-color: #141A36;
 }
+/*Style général*/
 body{
     margin:0;
     padding: 0;
@@ -11,6 +12,12 @@ body{
 
 header{
     border-bottom: 1px solid rgba(0, 0, 0, 0.38);
+}
+
+.boutton{
+    color:var(--pimary_color);
+    background-color: var(--blue-color);
+    border-radius: 45px;
 }
  header>div{
     display: flex;
@@ -40,7 +47,7 @@ header{
     padding: 10px 0;
     width: 100%;
 }
-#connect{
+#connect, #continue{
     width: auto;
     justify-self: center;
     margin-top: 10px;
@@ -49,8 +56,43 @@ header{
 
 
 
+.welcome{
+    display: flex;
+    position:absolute;
+    top:0;
+    background-color: rgba(20, 26, 54, 0.28);
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.welcome>div{
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+.welcome>div div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.welcome_header{
+    justify-content: space-between;
+}
+.welcome_content{
+    border: 1px solid rgba(0, 0, 0, 0.38);
+    padding: 5px;
+}
 
-
+.welcome_content input, .welcome_content label{
+    display: block;
+    width: 100%;
+    padding: 10px 0;;
+}
+.welcome_content label img{
+    transform:translateY(6px) ;
+    padding-right: 5px;
+}
 
 
 /*Gestion des Media Querries*/
@@ -76,6 +118,12 @@ header{
     }
     .display_connexion input, .display_connexion label{
         width: 580px;
+    }
+    .welcome_content{
+        width: 500px;
+    }
+    .welcome_content input,.welcome_content label{
+        width: 480px;
     }
 }
 @media (min-width:1144px){
