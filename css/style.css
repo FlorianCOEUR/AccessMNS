@@ -1,0 +1,83 @@
+:root{
+    --pimary_color:#FE6716;
+    --blue-color: #141A36;
+}
+body{
+    margin:0;
+    padding: 0;
+    font-family: "Roboto", serif;
+}
+
+
+header{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.38);
+}
+ header>div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 00px 20px;
+    padding: 10px 0;
+ }
+
+.display_connexion{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 10px 10px;
+    transform: translateY(70%);
+
+}
+.display_connexion div:first-child{
+    width: fit-content;
+    margin: auto;
+}
+ 
+.display_connexion input, .display_connexion label{
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+}
+#connect{
+    width: auto;
+    justify-self: center;
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+
+
+
+
+
+
+/*Gestion des Media Querries*/
+@media(min-width:512px){
+    .display_connexion{
+        width: 512px;
+    }
+    .display_connexion input, .display_connexion label{
+        width: 490px;
+    }
+}
+@media (min-width:768px){
+    .display_connexion{
+        width: 500px;
+    }
+    .display_connexion input, .display_connexion label{
+        width: 480px;
+    }
+}
+@media (min-width:992px){
+    .display_connexion{
+        width: 600px;
+    }
+    .display_connexion input, .display_connexion label{
+        width: 580px;
+    }
+}
+@media (min-width:1144px){
+    
+}
