@@ -1,33 +1,65 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COnnexion | Access MNS</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <div>
-            <img src="img/aMNS_logo.png" alt="logo Access MNS">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Connexion | Access MNS</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
             <div>
-                <span>Premier jour? </span>
-                <a href="">Démarrez ici!</a>
+                <img src="img/aMNS_logo.png" alt="logo Access MNS">
+                <div>
+                    <span>Premier jour? </span>
+                    <a href="#" id="starting">Démarrez ici!</a>
+                </div>
             </div>
-        </div>
-    </header>
-    <main>
-        <div>
-            <div>
-                <h1>Se connecter</h1>
-                <span>Une belle phrase de connexion</span>
+        </header>
+        <main>
+            <div class="display_connexion">
+                <div>
+                    <h1>Se connecter</h1>
+                    <span>Une belle phrase de connexion</span>
+                </div>
+                <div>
+                    <form action="">
+                        <label for="email">Entre votre Email*</label>
+                        <input type="email" name="mail" id="email" placeholder="nom.prenom@amns.fr">
+                        <label for="motdepasse"> Mot de Passe*</label>
+                        <input type="password" name="mdp" id="motdepasse" required>
+                        <input class="boutton" type="submit" name="connexion" id="connect" value="Connexion">
+                    </form>
+                </div>
+                <div><a href="">Mot de passe oublié?</a></div>
             </div>
-            <div>
-                <form action="">
-                    <label for="email"></label>
-                </form>
+            <div class="welcome">
+                <div>
+                    <div class="welcome_header">
+                        <h2>Bienvenue Chez MNS</h2>
+                        <a href="#" id="end_starting"><img src="img/close.png" alt="boutton de fermeture"></a>
+                    </div>
+                    <div class="welcome_content">
+                        <form action="">
+                            <label for="new_email"><img src="img/arobase.png" alt=" logo arobase">Entrez votre email :</label>
+                            <input type="email" name="mail" id="new_email" placeholder="nom.prenom@amns.fr" required>
+                            <input class="boutton" type="button" onclick="testValue();" name="continue" id="continue" value="Continuer">
+                        </form>
+                        <p class="alert">Veuillez entrer une adresse email valide!</p>
+                    </div>
+                    <div class="welcome_content_mdp">
+                        <label for="motdepasse"> Mot de Passe*</label>
+                        <input type="password" name="mdp" id="motdepasse" required>
+                        <label for="motdepasse_check"> Mot de Passe*</label>
+                        <input type="password" name="mdp_check" id="motdepasse_check" required>
+                        <input class="boutton" type="submit" name="nouveau_mdp" id="new_mdp" value="Démarrer">
+                    </div>
+                </div>
             </div>
-        </div>
-    </main>
-</body>
+        </main>
+        <script src="js/script.js"></script>
+    </body>
 </html>
