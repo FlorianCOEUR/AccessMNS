@@ -1,12 +1,14 @@
 :root{
     --pimary_color:#FE6716;
     --blue-color: #141A36;
+    --separator-color: rgba(20, 26, 54, 0.38);
 }
 /*Style général*/
 body{
     margin:0;
     padding: 0;
     font-family: "Roboto", serif;
+    color: var(--blue-color);
 }
 
 
@@ -19,22 +21,71 @@ header{
     background-color: var(--blue-color);
     border-radius: 45px;
 }
+
+/*Style du header*/
+
  header>div{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     margin: 00px 20px;
-    padding: 10px 0;
  }
-
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.resume{
+    display: none;
+}
+header p{
+    margin: 0px;
+}
+header ul{
+    list-style-type: none;
+    padding-left: 0px;
+}
+nav img{
+    max-height: 80px;
+    width: auto;
+}
+.nav_hide{
+    display: none;
+    position: absolute;
+    text-align: end;
+    top: 80px;
+    right: 20px;
+}
+.menu_overlay .resume{
+    display: block;
+    margin: 0;
+}
+.nav_hide.active {
+    display: block;
+}
+nav a{
+    text-decoration: none;
+    color: #141A36;
+}
+.menu_overlay ul{
+    background-color: white;
+    border: 1px solid var(--blue-color);
+    border-radius: 5px;
+}
+.menu_overlay ul li{
+    padding: 5px 5px;
+    margin: 5px;
+    border-bottom: 1px solid var(--separator-color);
+}
+/*Style de la page de connexion*/
 .display_connexion{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin: auto;
     padding: 10px 10px;
-    transform: translateY(70%);
+    transform: translateY(50%);
 
 }
 .display_connexion div:first-child{
@@ -53,7 +104,6 @@ header{
     margin-top: 10px;
     padding: 5px 10px;
 }
-
 
 .welcome{
     display: none;
@@ -98,7 +148,62 @@ header{
     color:red;
 }
 
+/*Style de la fenêtre de chat*/
+.group_chat{
+    display: flex;
+    height: calc(100vh - 90px);
+}
+.channel_list{
+    border-right: 1px solid var(--separator-color);
 
+}
+.headCL{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    height: 80px;
+    padding:0 5px ;
+}
+.channel{
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    padding:0 5px ;
+}
+.channel>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 5px;
+}
+.channel>div>div{
+    display: flex;
+}
+.head_channel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.preview_last_message{
+    overflow: hidden; /* Cache le texte qui dépasse */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Nombre de lignes avant "..." */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    margin: 5px 0;
+}
+.chat_container{
+    display: none;
+}
+.separator{
+    height: 1px;
+    width: 100%;
+    background-color: var(--separator-color);
+}
 /*Gestion des Media Querries*/
 @media(min-width:512px){
     .display_connexion{
@@ -115,6 +220,12 @@ header{
     .display_connexion input, .display_connexion label{
         width: 480px;
     }
+    .chat_container{
+        display: flex;
+    }
+    .channel_list{
+        width: 300px;
+    }
 }
 @media (min-width:992px){
     .display_connexion{
@@ -128,6 +239,17 @@ header{
     }
     .welcome input,.welcome label{
         width: 480px;
+    }
+    .menu_overlay .resume{
+        display:none;
+    }   
+    .resume{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: end;
+        margin-right: 10px;
     }
 }
 @media (min-width:1144px){
